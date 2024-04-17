@@ -2,15 +2,20 @@ let box = document.querySelectorAll(".box");
 let reset = document.querySelector(".resetBtn");
 let term = document.querySelector(".term");
 let newGame = document.querySelector(".newGame");
-let winner = document.querySelector(".winner");
+let winner = document.querySelector("#winner");
 let text = document.querySelector(".text");
+let gameScreen = document.querySelector("#gameScreen");
 let turnO = true; //playerX playerO
 //winning pattern
 
 
 
 const newGamefn = () =>{
-    winner.style.zIndex = -1;
+    console.log("clicked new game");
+    winner.style.display = "none";
+    gameScreen.style.display = "block";
+    // winner.classList.add("none");
+    // gameScreen.classList.remove("none");
     box.forEach((x) => {
       x.innerText = "";
       turnO = true;
@@ -75,7 +80,8 @@ const checkWinner = ()=>{
         let pos3 = box[pattern[2]].innerText;
         if(pos1 != "" && pos2 != "" && pos3 != ""){
             if(pos1 == pos2 && pos2 == pos3){
-                winner.style.zIndex = 1;
+                winner.style.display = "block";
+                gameScreen.style.display = "none";
                 text.innerText = `The Winner Is ${pos1}`;
             }
         }

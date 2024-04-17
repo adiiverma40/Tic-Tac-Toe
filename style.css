@@ -1,8 +1,5 @@
-.winner{
-  z-index:1 ;
- 
-}
-.winner img{
+
+#winner img{
   width : 28%;
   height: 40%;
   mix-blend-mode: multiply;
@@ -29,12 +26,15 @@
   font-size: 2rem;
   color:black;
 }
+#gameScreen{
+  display: none;
+}
 
 .game {
-
-  position:absolute;
+  /* display: block; */
+  /* position:absolute;
   left: 5em;
-  right: 5em;
+  right: 5em; */
   width: 80vw;
   margin-left: auto;
   margin-right: auto;
@@ -45,6 +45,9 @@
   border-radius: 1%;
 }
 
+/* .none{
+  display: none;
+} */
 body {
   padding: 0;
   margin: 0;
