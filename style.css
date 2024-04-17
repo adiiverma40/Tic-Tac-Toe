@@ -1,4 +1,40 @@
+.winner{
+  z-index:1 ;
+ 
+}
+.winner img{
+  width : 28%;
+  height: 40%;
+  mix-blend-mode: multiply;
+  margin-left: 36%;
+  
+}
+
+.newGame{
+  border: none;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  font-size:1rem ;
+  padding: 10px;
+  text-align: center;
+  margin-top: 2em;
+  margin-left: 46%;
+  display: block;
+}
+.newGame:hover{
+  cursor: pointer;
+}
+.text{
+  font-size: 2rem;
+  color:black;
+}
+
 .game {
+
+  position:absolute;
+  left: 5em;
+  right: 5em;
   width: 80vw;
   margin-left: auto;
   margin-right: auto;
@@ -52,6 +88,8 @@ body {
   font-size: 5rem;
   font-weight: 500;
   text-align: center;
+  background-color: lavender;
+  color: black;
 }
 
 /* reset button and text */
@@ -63,14 +101,25 @@ body {
 }
 .resetBtn {
   font-size: 1.3rem;
-  color: #3f87a6;
+  color: #bcf8ec;
   font-weight: 500;
   text-align: center;
   margin-left: 10px;
   border: none;
   border-radius: 5px;
   background-color: black;
+  padding-bottom: 5px;
+}
+.resetBtn:hover {
+  cursor: pointer;
+}
+.resetBtn:focus {
+  outline: none;
 }
 .resetText {
   text-align: center;
+}
+.clicked {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
 }
